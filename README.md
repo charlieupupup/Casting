@@ -1,6 +1,7 @@
 # Capstone Project
 
-build: ![build](https://img.shields.io/github/workflow/status/charlieupupup/Casting/Python application)
+https://img.shields.io/github/workflow/status/charlieupupup/Casting/Python application
+
 ## content
 
 1. Database modeling with `postgres` & `sqlalchemy`
