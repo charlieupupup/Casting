@@ -1,6 +1,6 @@
 # Capstone Project
 
-https://img.shields.io/github/workflow/status/charlieupupup/Casting/Python application
+![Python applicion](https://github.com/charlieupupup/Casting/workflows/Python%20application/badge.svg)
 
 ## content
 
