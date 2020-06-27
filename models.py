@@ -3,21 +3,24 @@ from sqlalchemy import Column, String, Integer, create_engine, Date, Float
 from flask_sqlalchemy import SQLAlchemy
 import json
 from datetime import date
-from config import database_setup
+
+import psycopg2
+
+DATABASE_URL = os.environ['DATABASE_URL']
+
+# conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+
 
 #----------------------------------------------------------------------------#
 # Database Setup
 #----------------------------------------------------------------------------#
 
 # Use Production Database.
-# If run locally, key does not exist, so use locally set database instead.
-database_path = os.environ.get('DATABASE_URL', "postgres://{}:{}@{}/{}".format(
-    database_setup["user_name"], database_setup["password"], database_setup["port"], database_setup["database_name_test"]))
 
 db = SQLAlchemy()
 
 
-def setup_db(app, database_path=database_path):
+def setup_db(app, database_path=DATABASE_URL):
     '''binds a flask application and a SQLAlchemy service'''
     app.config["SQLALCHEMY_DATABASE_URI"] = database_path
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False

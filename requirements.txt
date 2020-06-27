@@ -6,3 +6,4 @@ Flask-Migrate
 python-jose[cryptography]
 Flask-Cors
 pycrypto
+psycopg2-binary
