@@ -78,7 +78,7 @@ def create_app(test_config=None):
   # Endpoint /actors GET/POST/DELETE/PATCH
   #----------------------------------------------------------------------------#
   @app.route('/actors', methods=['GET'])
-  @requires_auth('read:actors')
+  # @requires_auth('read:actors')
   def get_actors(payload):
     """Returns paginated actors object
 
